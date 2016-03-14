@@ -1,0 +1,71 @@
+2016-03-14 16:30:08 [6463] [INFO] Starting gunicorn 17.5
+2016-03-14 16:30:08 [6463] [INFO] Listening at: http://0.0.0.0:8080 (6463)
+2016-03-14 16:30:08 [6463] [INFO] Using worker: sync
+2016-03-14 16:30:08 [6468] [INFO] Booting worker with pid: 6468
+2016-03-14 16:30:08 [6468] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+ImportError: No module named wsgi_app
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+ImportError: No module named wsgi_app
+2016-03-14 16:30:08 [6468] [INFO] Worker exiting (pid: 6468)
+2016-03-14 16:30:08 [6469] [INFO] Booting worker with pid: 6469
+2016-03-14 16:30:09 [6469] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+ImportError: No module named wsgi_app
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+ImportError: No module named wsgi_app
+2016-03-14 16:30:09 [6469] [INFO] Worker exiting (pid: 6469)
+2016-03-14 16:30:09 [6463] [INFO] Shutting down: Master
+2016-03-14 16:30:09 [6463] [INFO] Reason: Worker failed to boot.
+2016-03-14 16:36:38 [6736] [INFO] Starting gunicorn 17.5
+2016-03-14 16:36:38 [6736] [ERROR] Connection in use: ('0.0.0.0', 8080)
+2016-03-14 16:36:38 [6736] [ERROR] Retrying in 1 second.
+2016-03-14 16:36:39 [6736] [ERROR] Connection in use: ('0.0.0.0', 8080)
+2016-03-14 16:36:39 [6736] [ERROR] Retrying in 1 second.
+2016-03-14 16:36:40 [6736] [ERROR] Connection in use: ('0.0.0.0', 8080)
+2016-03-14 16:36:40 [6736] [ERROR] Retrying in 1 second.
+2016-03-14 16:36:41 [6736] [ERROR] Connection in use: ('0.0.0.0', 8080)
+2016-03-14 16:36:41 [6736] [ERROR] Retrying in 1 second.
+2016-03-14 16:36:42 [6736] [ERROR] Connection in use: ('0.0.0.0', 8080)
+2016-03-14 16:36:42 [6736] [ERROR] Retrying in 1 second.
+2016-03-14 16:36:43 [6736] [ERROR] Can't connect to ('0.0.0.0', 8080)

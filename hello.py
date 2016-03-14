@@ -1,7 +1,5 @@
 pidfile = "/home/box/web/gunicorn/gunicorn.pid"
-accesslog = "/home/box/web/gunicorn/access.log"
-errorlog = "/home/box/web/gunicorn/error.log"
-pythonpath = "/home/box/web/ask/ask"
+pythonpath = "/home/box/web/"
 workers = 16
 timeout = 60
 

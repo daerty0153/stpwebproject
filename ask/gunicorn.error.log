@@ -1,0 +1,194 @@
+2016-03-14 16:19:43 [5810] [INFO] Starting gunicorn 17.5
+2016-03-14 16:19:43 [5810] [INFO] Listening at: http://0.0.0.0:8000 (5810)
+2016-03-14 16:19:43 [5810] [INFO] Using worker: sync
+2016-03-14 16:19:43 [5815] [INFO] Booting worker with pid: 5815
+2016-03-14 16:19:44 [5816] [INFO] Booting worker with pid: 5816
+2016-03-14 13:19:48 [5815] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 126, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 168, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 44, in load_middleware
+    mw_class = import_string(middleware_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 26, in import_string
+    module = import_module(module_path)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named security
+2016-03-14 16:20:51 [5810] [INFO] Handling signal: term
+2016-03-14 13:20:51 [5816] [INFO] Worker exiting (pid: 5816)
+2016-03-14 13:20:51 [5815] [INFO] Worker exiting (pid: 5815)
+2016-03-14 16:20:51 [5810] [INFO] Shutting down: Master
+2016-03-14 16:20:51 [5901] [INFO] Starting gunicorn 17.5
+2016-03-14 16:20:51 [5901] [INFO] Listening at: http://0.0.0.0:8000 (5901)
+2016-03-14 16:20:51 [5901] [INFO] Using worker: sync
+2016-03-14 16:20:51 [5906] [INFO] Booting worker with pid: 5906
+2016-03-14 16:20:51 [5907] [INFO] Booting worker with pid: 5907
+2016-03-14 13:20:52 [5907] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+  File "/home/zagzag/box/web/ask/ask/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+    django.setup()
+  File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 21, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/config.py", line 87, in create
+    module = import_module(entry)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named qa
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+  File "/home/zagzag/box/web/ask/ask/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+    django.setup()
+  File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 21, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/config.py", line 87, in create
+    module = import_module(entry)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named qa
+2016-03-14 13:20:52 [5907] [INFO] Worker exiting (pid: 5907)
+2016-03-14 13:20:52 [5906] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+  File "/home/zagzag/box/web/ask/ask/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+    django.setup()
+  File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 21, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/config.py", line 87, in create
+    module = import_module(entry)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named qa
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+  File "/home/zagzag/box/web/ask/ask/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+    django.setup()
+  File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 21, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/config.py", line 87, in create
+    module = import_module(entry)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named qa
+2016-03-14 13:20:52 [5906] [INFO] Worker exiting (pid: 5906)
+2016-03-14 16:20:52 [5901] [INFO] Shutting down: Master
+2016-03-14 16:20:52 [5901] [INFO] Reason: Worker failed to boot.
+2016-03-14 16:21:38 [5982] [INFO] Starting gunicorn 17.5
+2016-03-14 16:21:38 [5982] [INFO] Listening at: http://0.0.0.0:8000 (5982)
+2016-03-14 16:21:38 [5982] [INFO] Using worker: sync
+2016-03-14 16:21:38 [5987] [INFO] Booting worker with pid: 5987
+2016-03-14 16:21:38 [5988] [INFO] Booting worker with pid: 5988
+2016-03-14 16:23:58 [5982] [INFO] Handling signal: term
+2016-03-14 13:23:58 [5987] [INFO] Worker exiting (pid: 5987)
+2016-03-14 13:23:58 [5988] [INFO] Worker exiting (pid: 5988)
+2016-03-14 16:23:58 [5982] [INFO] Shutting down: Master
+2016-03-14 16:23:59 [6114] [INFO] Starting gunicorn 17.5
+2016-03-14 16:23:59 [6114] [INFO] Listening at: http://0.0.0.0:8000 (6114)
+2016-03-14 16:23:59 [6114] [INFO] Using worker: sync
+2016-03-14 16:23:59 [6120] [INFO] Booting worker with pid: 6120
+2016-03-14 16:23:59 [6121] [INFO] Booting worker with pid: 6121
+2016-03-14 16:23:59 [6123] [INFO] Starting gunicorn 17.5
+2016-03-14 16:23:59 [6123] [ERROR] Connection in use: ('0.0.0.0', 8000)
+2016-03-14 16:23:59 [6123] [ERROR] Retrying in 1 second.
+2016-03-14 16:24:00 [6123] [ERROR] Connection in use: ('0.0.0.0', 8000)
+2016-03-14 16:24:00 [6123] [ERROR] Retrying in 1 second.
+2016-03-14 16:24:01 [6123] [ERROR] Connection in use: ('0.0.0.0', 8000)
+2016-03-14 16:24:01 [6123] [ERROR] Retrying in 1 second.
+2016-03-14 16:24:02 [6123] [ERROR] Connection in use: ('0.0.0.0', 8000)
+2016-03-14 16:24:02 [6123] [ERROR] Retrying in 1 second.
+2016-03-14 16:24:03 [6123] [ERROR] Connection in use: ('0.0.0.0', 8000)
+2016-03-14 16:24:03 [6123] [ERROR] Retrying in 1 second.
+2016-03-14 16:24:04 [6123] [ERROR] Can't connect to ('0.0.0.0', 8000)
+2016-03-14 16:27:47 [6114] [INFO] Handling signal: term
+2016-03-14 13:27:47 [6120] [INFO] Worker exiting (pid: 6120)
+2016-03-14 13:27:47 [6121] [INFO] Worker exiting (pid: 6121)
+2016-03-14 16:27:47 [6114] [INFO] Shutting down: Master
+2016-03-14 16:27:48 [6268] [INFO] Starting gunicorn 17.5
+2016-03-14 16:27:48 [6268] [INFO] Listening at: http://0.0.0.0:8000 (6268)
+2016-03-14 16:27:48 [6268] [INFO] Using worker: sync
+2016-03-14 16:27:48 [6273] [INFO] Booting worker with pid: 6273
+2016-03-14 16:27:48 [6274] [INFO] Booting worker with pid: 6274
+2016-03-14 16:27:48 [6276] [INFO] Starting gunicorn 17.5
+2016-03-14 16:27:48 [6276] [ERROR] Connection in use: ('0.0.0.0', 8000)
+2016-03-14 16:27:48 [6276] [ERROR] Retrying in 1 second.
+2016-03-14 16:27:49 [6276] [ERROR] Connection in use: ('0.0.0.0', 8000)
+2016-03-14 16:27:49 [6276] [ERROR] Retrying in 1 second.
+2016-03-14 16:27:50 [6276] [ERROR] Connection in use: ('0.0.0.0', 8000)
+2016-03-14 16:27:50 [6276] [ERROR] Retrying in 1 second.
+2016-03-14 16:27:51 [6276] [ERROR] Connection in use: ('0.0.0.0', 8000)
+2016-03-14 16:27:51 [6276] [ERROR] Retrying in 1 second.
+2016-03-14 16:27:52 [6276] [ERROR] Connection in use: ('0.0.0.0', 8000)
+2016-03-14 16:27:52 [6276] [ERROR] Retrying in 1 second.
+2016-03-14 16:27:53 [6276] [ERROR] Can't connect to ('0.0.0.0', 8000)
+2016-03-14 16:28:41 [6268] [INFO] Handling signal: term
+2016-03-14 13:28:41 [6273] [INFO] Worker exiting (pid: 6273)
+2016-03-14 13:28:41 [6274] [INFO] Worker exiting (pid: 6274)
+2016-03-14 16:28:41 [6268] [INFO] Shutting down: Master
+2016-03-14 16:30:08 [6455] [INFO] Starting gunicorn 17.5
+2016-03-14 16:30:08 [6455] [INFO] Listening at: http://0.0.0.0:8000 (6455)
+2016-03-14 16:30:08 [6455] [INFO] Using worker: sync
+2016-03-14 16:30:08 [6460] [INFO] Booting worker with pid: 6460
+2016-03-14 16:30:08 [6461] [INFO] Booting worker with pid: 6461
+2016-03-14 16:35:25 [6455] [INFO] Handling signal: term
+2016-03-14 13:35:25 [6460] [INFO] Worker exiting (pid: 6460)
+2016-03-14 13:35:25 [6461] [INFO] Worker exiting (pid: 6461)
+2016-03-14 16:35:25 [6455] [INFO] Shutting down: Master
+2016-03-14 16:36:38 [6729] [INFO] Starting gunicorn 17.5
+2016-03-14 16:36:38 [6729] [INFO] Listening at: http://0.0.0.0:8000 (6729)
+2016-03-14 16:36:38 [6729] [INFO] Using worker: sync
+2016-03-14 16:36:38 [6734] [INFO] Booting worker with pid: 6734
+2016-03-14 16:36:38 [6737] [INFO] Booting worker with pid: 6737
